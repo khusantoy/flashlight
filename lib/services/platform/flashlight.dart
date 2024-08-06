@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class Flashlight {
@@ -7,7 +8,9 @@ class Flashlight {
       final bool result = await platform.invokeMethod('toggleFlashLight');
       return result;
     } on PlatformException catch (e) {
-      print("Failed to toggle flashlight: '${e.message}'.");
+      if (kDebugMode) {
+        print("Failed to toggle flashlight: '${e.message}'.");
+      }
     }
     return false;
   }
