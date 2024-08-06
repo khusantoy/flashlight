@@ -1,8 +1,9 @@
 # 🌟 App Name: Flashlight
-<video width="600" controls>
-  <source src="[https://example.com/path/to/video.mp4" type="video/mp4](https://github.com/khusantoy/flashlight/blob/main/Screenrecorder-2024-08-06-21-15-40-229.mp4)">
-  Your browser does not support the video tag.
-</video>
+
+
+
+https://github.com/user-attachments/assets/742b62ac-43d8-48f6-a9d0-3877eb15b502
+
 
 **💡 Description:**
 
