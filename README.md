@@ -1,16 +1,21 @@
-# flashlight
+# 🌟 App Name: Flashlight
 
-A new Flutter project.
+**💡 Description:**
 
-## Getting Started
+The Flashlight app offers a bright, easy-to-use flashlight feature with a sleek design. Enjoy a simple interface and smooth Lottie animations for turning the light on and off.
 
-This project is a starting point for a Flutter application.
+**🔑 Key Features:**
 
-A few resources to get you started if this is your first Flutter project:
+- 🎨 Intuitive interface.
+- ⚡ Instant light control.
+- 🎬 Animated splash screen.
+- 🚀 Smooth transitions.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**📚 What I Learned:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Implemented custom transitions.
+- Managed persistent data with SharedPreferences.
+- Used Method Channels for native flashlight control.
+- Fixed flashlight state retention by caching the state.
+
+**📦 [Download APK](https://t.me/khusanboyscodes/268)**
