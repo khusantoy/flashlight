@@ -1,6 +1,7 @@
 import 'package:flashlight/services/platform/flashlight.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,7 +14,22 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isOn = false;
 
   void _toggleFlashLight() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
     isOn = await Flashlight.toggleFlashLight();
+    await prefs.setBool('status', isOn);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadFlashlightStatus();
+  }
+
+  void _loadFlashlightStatus() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      isOn = prefs.getBool('status') ?? false;
+    });
   }
 
   @override
