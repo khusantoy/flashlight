@@ -1,3 +1,4 @@
+import 'package:flashlight/services/platform/flashlight.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,6 +11,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool isOn = false;
+
+  void _toggleFlashLight() async {
+    isOn = await Flashlight.toggleFlashLight();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 left: 155.w,
                 child: GestureDetector(
                   onTap: () {
+                    _toggleFlashLight();
                     setState(() {
                       isOn = !isOn;
                     });
